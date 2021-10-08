@@ -1,0 +1,97 @@
+.cats-item {
+  background-color: $color-whitesmoke;
+  position: relative;
+}
+
+.cats-item img {
+  margin-bottom: 29px;
+}
+
+.cats-item__title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  margin: 0 0 22px 0;
+  padding: 0 30px;
+  color: $color-default-black;
+}
+
+.cats-item__button {
+  width: 100%;
+  padding: 21px 0 22px 0;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: $color-default-white;
+  background-color: $color-seagull;
+  border: none;
+  border-radius: 0 0 10px 10px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+
+  &:hover {
+    color: $color-blackpearl;
+    box-shadow: 0 0 5px 2px $color-blackpearl;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.cats-item__button--sold {
+  background-color: $color-blackpearl;
+
+  &:hover {
+    color: $color-seagull;
+    box-shadow: none;
+  }
+}
+
+.cats-item__price {
+  margin: 0 0 29px 0;
+  padding: 0 30px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: $color-default-black;
+}
+
+.cats-item__like-button {
+  position: absolute;
+  top: 30px;
+  right: 25px;
+  background: url("../img/icon-like.svg") no-repeat;
+  width: 46px;
+  height: 46px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &--active {
+    background: url("../img/icon-like-checked.svg") no-repeat;
+  }
+}
+
+.cats-item__discount {
+  width: 78px;
+  height: 39px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 30px;
+  left: 25px;
+  background-color: $color-cinnabar;
+  text-align: center;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: $color-default-white;
+  border-radius: 10px;
+}

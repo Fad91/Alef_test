@@ -1,0 +1,41 @@
+.stats-list {
+  padding: 0 55px 0 30px;
+  margin: 0 0 24px 0;
+  list-style: none;
+  display: flex;
+  column-gap: 36px;
+  align-items: baseline;
+
+  @include vp--1023 {
+    padding: 0 50px 0 30px;
+  }
+
+  @include vp--1023 {
+    padding: 0 5px 0 20px;
+    column-gap: 25px;
+  }
+}
+
+.stats-list__item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: $color-default-black;
+}
+
+.stats-list__item:first-child {
+  padding-left: 20px;
+
+  &::before {
+    content: "";
+    width: 4px;
+    height: 26px;
+    background-color: $color-seagull;
+    position: absolute;
+    top: 2px;
+    left: 0;
+  }
+}

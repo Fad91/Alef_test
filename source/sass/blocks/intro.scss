@@ -1,0 +1,21 @@
+.intro {
+  background: url("../img/intro-background-image.jpg") no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 0;
+
+  @include vp--767 {
+    background-position: center;
+  }
+
+  &::after {
+    content: "";
+    background: url("../img/intro-mask-image.png") no-repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+  }
+}

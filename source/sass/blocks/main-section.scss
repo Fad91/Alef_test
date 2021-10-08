@@ -1,0 +1,45 @@
+.main-section {
+  max-width: 1183px;
+  margin: 0 auto;
+  padding: 37px 0 83px 0;
+
+  @include vp--1023 {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+
+  @include vp--767 {
+    width: 320px;
+  }
+}
+
+.main-section__scroll-button {
+  width: 59px;
+  height: 59px;
+  background-color: $color-seagull;
+  border: none;
+  position: fixed;
+  bottom: 50px;
+  right: 235px;
+  opacity: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/icon-arrow-up.svg");
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 18px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &--show {
+    opacity: 1;
+  }
+
+  @include vp--1023 {
+    right: 50px;
+  }
+}

@@ -1,0 +1,46 @@
+.main-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  @include vp--767 {
+    grid-template-columns: 1fr;
+  }
+
+  &--closed {
+    @include vp--767 {
+      display: none;
+    }
+  }
+}
+
+.main-menu__item {
+  @include vp--767 {
+    padding: 15px 0;
+    text-align: center;
+    border-bottom: 1px solid $color-default-white;
+  }
+}
+
+.main-menu__item a {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: $color-default-white;
+  transition: all 0.5s ease;
+
+  &:hover {
+    text-decoration: underline;
+    color: $color-seagull;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  @include vp--767 {
+    font-size: 22px;
+  }
+}
